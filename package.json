@@ -13,5 +13,10 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.4.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
