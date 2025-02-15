@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
+    "lint-templates": "esrun scripts/lint-templates.ts",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +15,11 @@
   "author": "Bram Borggreve",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "@types/node": "^22.13.4",
+    "dotenv": "^16.4.7",
+    "esrun": "^3.2.26",
+    "prettier": "^3.4.2",
+    "typescript": "~5.7.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
