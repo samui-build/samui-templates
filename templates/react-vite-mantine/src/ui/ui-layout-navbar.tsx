@@ -7,7 +7,7 @@ export function UiLayoutNavbar({ groups, close }: { groups: UiLayoutNavbarLinkGr
   const items = groups.map((item) => <UiLayoutNavbarLinksGroup {...item} key={item.label} close={close} />)
 
   return (
-    <Flex component="nav" h="100%" direction="column" px="md" py={0}>
+    <Flex component="nav" h="100%" direction="column" px="md">
       <ScrollArea className={classes.links}>
         <Box>{items}</Box>
       </ScrollArea>

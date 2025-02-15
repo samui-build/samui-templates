@@ -1,6 +1,6 @@
 import { Button } from '@mantine/core'
 import { Link } from 'react-router'
-import { UiPage } from '../ui'
+import { UiPage } from '../../ui'
 
 export default function FeatureAbout() {
   return (

@@ -32,6 +32,9 @@ importers:
       '@mantine/notifications':
         specifier: ^7.16.3
         version: 7.16.3(@mantine/core@7.16.3(@mantine/hooks@7.16.3(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.16.3(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@tanstack/react-query':
+        specifier: ^5.66.0
+        version: 5.66.0(react@19.0.0)
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.0.0)
@@ -582,6 +585,14 @@ packages:
     resolution: {integrity: sha512-0PVwmgzZ8+TZ9oGBmdZoQVXflbvuwzN/HRclujpl4N/q3i+y0lqLw8n1bXA8ru3sApDjlmONaNAuYr38y1Kr9w==}
     cpu: [x64]
     os: [win32]
+
+  '@tanstack/query-core@5.66.0':
+    resolution: {integrity: sha512-J+JeBtthiKxrpzUu7rfIPDzhscXF2p5zE/hVdrqkACBP8Yu0M96mwJ5m/8cPPYQE9aRNvXztXHlNwIh4FEeMZw==}
+
+  '@tanstack/react-query@5.66.0':
+    resolution: {integrity: sha512-z3sYixFQJe8hndFnXgWu7C79ctL+pI0KAelYyW+khaNJ1m22lWrhJU2QrsTcRKMuVPtoZvfBYrTStIdKo+x0Xw==}
+    peerDependencies:
+      react: ^18 || ^19
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1834,6 +1845,13 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.34.6':
     optional: true
+
+  '@tanstack/query-core@5.66.0': {}
+
+  '@tanstack/react-query@5.66.0(react@19.0.0)':
+    dependencies:
+      '@tanstack/query-core': 5.66.0
+      react: 19.0.0
 
   '@types/babel__core@7.20.5':
     dependencies:

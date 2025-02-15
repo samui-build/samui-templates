@@ -1,6 +1,5 @@
 import { Box, Collapse, Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core'
 import { LucideChevronRight, LucideProps } from 'lucide-react'
-
 import { ForwardRefExoticComponent, RefAttributes, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import classes from './ui-layout-navbar-links-group.module.css'
