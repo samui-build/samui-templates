@@ -7,7 +7,7 @@ export async function lintPackageJson({
   templatesDir,
   templates,
   expected,
-}: TemplatesResult & {
+}: Omit<TemplatesResult, 'directory'> & {
   expected: Record<string, string>
 }) {
   console.log(`lintPackageJson: ${templatesDir}`)

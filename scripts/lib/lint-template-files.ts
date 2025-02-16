@@ -4,7 +4,13 @@ import { existsSync } from 'node:fs'
 import { readFile, writeFile } from 'node:fs/promises'
 import { getTemplateFiles } from './get-template-files'
 
-export async function lintTemplateFiles({ templatesDir, templates, files }: TemplatesResult & { files: string[] }) {
+export async function lintTemplateFiles({
+  templatesDir,
+  templates,
+  files,
+}: Omit<TemplatesResult, 'directory'> & {
+  files: string[]
+}) {
   console.log(`lintTemplateFiles: ${templatesDir}`)
   // Load in the root templates
   const templateFiles = await getTemplateFiles(files)
