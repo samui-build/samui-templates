@@ -1,0 +1,41 @@
+{
+  "name": "hono-node-solana-gill",
+  "description": "Hono on Node.js with the Solana Gill SDK",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "docker:build": "docker build -t hono-node-solana-gill:latest .",
+    "docker:run": "docker run --rm --name hono-node-solana-gill -p 3000:3000 --env-file .env hono-node-solana-gill:latest",
+    "docker:push": "docker push hono-node-solana-gill"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "dotenv": "^16.4.7",
+    "gill": "^0.2.0",
+    "hono": "^4.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^20.11.17",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "tsx": "^4.7.1",
+    "typescript-eslint": "^8.24.0"
+  },
+  "create-solana-dapp": {
+    "instructions": [
+      "Make sure you have a .env file:",
+      "+cp .env.example .env",
+      "",
+      "Update the name property in wrangler.json and set the ALLOWED_ORIGINS variable to your domains"
+    ]
+  }
+}

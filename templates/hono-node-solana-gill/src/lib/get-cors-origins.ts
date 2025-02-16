@@ -1,4 +1,4 @@
-import { Context } from 'hono'
+import type { Context } from 'hono'
 import { getEnv } from './get-env.js'
 
 export function getCorsOrigins(c: Context): string[] {
