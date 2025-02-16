@@ -30,7 +30,7 @@
       "Make sure you have a .dev.vars file:",
       "+cp .dev.vars.example .dev.vars",
       "",
-      "You can configure the CORS origins in wrangler.json"
+      "Update the name property in wrangler.json and set the ALLOWED_ORIGINS variable to your domains"
     ]
   }
 }
