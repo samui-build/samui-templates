@@ -1,0 +1,28 @@
+{
+  "name": "hono-cloudflare-workers-solana-gill",
+  "description": "Hono on Cloudflare Workers with the Solana Gill SDK",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "gill": "^0.2.0",
+    "hono": "^4.7.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript-eslint": "^8.24.0",
+    "wrangler": "^3.101.0"
+  }
+}

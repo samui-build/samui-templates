@@ -1,3 +1,8 @@
 {
-  "templates": ["node-solana-gill", "node-solana-web3js-umi", "react-vite-mantine"]
+  "templates": [
+    "hono-cloudflare-workers-solana-gill",
+    "node-solana-gill",
+    "node-solana-web3js-umi",
+    "react-vite-mantine"
+  ]
 }
