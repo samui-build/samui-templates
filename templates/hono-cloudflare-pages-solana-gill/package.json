@@ -1,0 +1,41 @@
+{
+  "name": "hono-cloudflare-pages-solana-gill",
+  "description": "Hono on Cloudflare Pages with the Solana Gill SDK",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "pnpm run build && wrangler pages deploy",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "gill": "^0.2.0",
+    "hono": "^4.7.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "@eslint/js": "^9.20.0",
+    "@hono/vite-build": "^1.2.0",
+    "@hono/vite-dev-server": "^0.18.1",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "typescript-eslint": "^8.24.0",
+    "vite": "^5.4.12",
+    "wrangler": "^3.96.0"
+  },
+  "create-solana-dapp": {
+    "instructions": [
+      "Make sure you have a .dev.vars file:",
+      "+cp .dev.vars.example .dev.vars",
+      "",
+      "Update the name property in wrangler.json and set the ALLOWED_ORIGINS variable to your domains"
+    ]
+  }
+}

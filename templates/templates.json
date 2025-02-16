@@ -1,5 +1,6 @@
 {
   "templates": [
+    "hono-cloudflare-pages-solana-gill",
     "hono-cloudflare-workers-solana-gill",
     "hono-node-solana-gill",
     "node-solana-gill",
