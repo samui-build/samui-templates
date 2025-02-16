@@ -13,7 +13,7 @@ export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<Tem
 
   if (!existsSync(templatesJsonPath)) {
     console.log(`templates.json not found in ${templatesDir}`)
-    await writeFile(templatesJsonPath, JSON.stringify(content, null, 2))
+    await writeTemplatesDotJson(templatesJsonPath, content)
     return
   }
 
@@ -21,7 +21,7 @@ export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<Tem
 
   if (!Array.isArray(templatesJson?.templates)) {
     console.log(`templates.json is not an array, overwriting with ${templates.length} templates`)
-    await writeFile(templatesJsonPath, JSON.stringify(content, null, 2))
+    await writeTemplatesDotJson(templatesJsonPath, content)
     return
   }
 
@@ -35,5 +35,9 @@ export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<Tem
   console.log(
     `templates.json is not equal to ${templates.length} templates, overwriting with ${templates.length} templates`,
   )
-  await writeFile(templatesJsonPath, JSON.stringify(content, null, 2))
+  await writeTemplatesDotJson(templatesJsonPath, content)
+}
+
+function writeTemplatesDotJson(path: string, content: TemplatesDotJson) {
+  return writeFile(path, JSON.stringify(content, null, 2) + '\n')
 }
