@@ -34,7 +34,7 @@ importers:
         version: 4.7.1
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20250109.0
+        specifier: ^4.20250214.0
         version: 4.20250214.0
       '@eslint/js':
         specifier: ^9.20.0
@@ -43,16 +43,16 @@ importers:
         specifier: ^9.20.1
         version: 9.20.1
       globals:
-        specifier: ^15.14.0
+        specifier: ^15.15.0
         version: 15.15.0
       prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
+        specifier: ^3.5.1
+        version: 3.5.1
       typescript-eslint:
         specifier: ^8.24.0
         version: 8.24.0(eslint@9.20.1)(typescript@5.7.3)
       wrangler:
-        specifier: ^3.101.0
+        specifier: ^3.109.1
         version: 3.109.1(@cloudflare/workers-types@4.20250214.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
   templates/node-solana-gill:
@@ -2162,6 +2162,11 @@ packages:
 
   prettier@3.4.2:
     resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
+  prettier@3.5.1:
+    resolution: {integrity: sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4585,6 +4590,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@3.4.2: {}
+
+  prettier@3.5.1: {}
 
   printable-characters@1.0.42: {}
 

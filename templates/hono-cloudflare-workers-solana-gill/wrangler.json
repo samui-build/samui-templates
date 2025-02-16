@@ -2,13 +2,17 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hono-cloudflare-workers-solana-gill",
   "main": "src/index.ts",
-  "compatibility_date": "2025-02-16"
+  "compatibility_date": "2025-02-16",
+  "vars": {
+    "ALLOWED_ORIGINS": "https://localhost:3000;https://localhost:5173"
+  },
+  "observability": {
+    "enabled": true
+    //   "head_sampling_rate": 1
+  }
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
-  // "vars": {
-  //   "MY_VAR": "my-variable"
-  // },
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",
@@ -30,9 +34,5 @@
   // ],
   // "ai": {
   //   "binding": "AI"
-  // },
-  // "observability": {
-  //   "enabled": true,
-  //   "head_sampling_rate": 1
   // }
 }

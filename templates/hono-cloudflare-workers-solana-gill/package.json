@@ -17,12 +17,20 @@
     "hono": "^4.7.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250109.0",
+    "@cloudflare/workers-types": "^4.20250214.0",
     "@eslint/js": "^9.20.0",
     "eslint": "^9.20.1",
-    "globals": "^15.14.0",
-    "prettier": "^3.4.2",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
     "typescript-eslint": "^8.24.0",
-    "wrangler": "^3.101.0"
+    "wrangler": "^3.109.1"
+  },
+  "create-solana-dapp": {
+    "instructions": [
+      "Make sure you have a .dev.vars file:",
+      "+cp .dev.vars.example .dev.vars",
+      "",
+      "You can configure the CORS origins in wrangler.json"
+    ]
   }
 }
