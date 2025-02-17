@@ -3,6 +3,7 @@
     "hono-cloudflare-pages-solana-gill",
     "hono-cloudflare-workers-solana-gill",
     "hono-node-solana-gill",
+    "node-express",
     "node-solana-gill",
     "node-solana-web3js-umi",
     "react-router-mantine",
