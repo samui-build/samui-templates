@@ -4,6 +4,7 @@
     "hono-cloudflare-workers-solana-gill",
     "hono-node-solana-gill",
     "node-express",
+    "node-express-solana-gill",
     "node-solana-gill",
     "node-solana-web3js-umi",
     "react-router-mantine",
