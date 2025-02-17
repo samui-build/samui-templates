@@ -1,0 +1,53 @@
+{
+  "name": "react-router-mantine",
+  "description": "React Router (framework) using Mantine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
+    "docker:build": "docker build -t react-router-mantine:latest .",
+    "docker:run": "docker run --rm --name react-router-mantine -p 3000:3000 --env-file .env react-router-mantine:latest",
+    "docker:push": "docker push react-router-mantine"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.16.3",
+    "@mantine/form": "^7.16.3",
+    "@mantine/hooks": "^7.16.3",
+    "@mantine/modals": "^7.16.3",
+    "@mantine/notifications": "^7.16.3",
+    "@react-router/node": "^7.1.5",
+    "@react-router/serve": "^7.1.5",
+    "isbot": "^5.1.17",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.5",
+    "timeago-react": "^3.0.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@react-router/dev": "^7.1.5",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "postcss": "^8.5.2",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.5.1",
+    "react-router-devtools": "^1.1.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "license": "MIT"
+}

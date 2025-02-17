@@ -5,6 +5,7 @@
     "hono-node-solana-gill",
     "node-solana-gill",
     "node-solana-web3js-umi",
+    "react-router-mantine",
     "react-vite-mantine"
   ]
 }
