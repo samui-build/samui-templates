@@ -1,5 +1,5 @@
 {
-  "name": "react-router-mantine",
+  "name": "react-router-mantine-gill",
   "description": "React Router (framework) using Mantine",
   "private": true,
   "type": "module",
@@ -12,9 +12,9 @@
     "lint:fix": "eslint --fix .",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "docker:build": "docker build -t react-router-mantine:latest .",
-    "docker:run": "docker run --rm --name react-router-mantine -p 3000:3000 --env-file .env react-router-mantine:latest",
-    "docker:push": "docker push react-router-mantine"
+    "docker:build": "docker build -t react-router-mantine-gill:latest .",
+    "docker:run": "docker run --rm --name react-router-mantine-gill -p 3000:3000 --env-file .env react-router-mantine-gill:latest",
+    "docker:push": "docker push react-router-mantine-gill"
   },
   "dependencies": {
     "@mantine/core": "^7.16.3",
@@ -24,6 +24,8 @@
     "@mantine/notifications": "^7.16.3",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
+    "@solana/fast-stable-stringify": "^2.0.0",
+    "gill": "^0.2.0",
     "isbot": "^5.1.17",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",

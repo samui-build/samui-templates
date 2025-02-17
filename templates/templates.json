@@ -6,6 +6,7 @@
     "node-solana-gill",
     "node-solana-web3js-umi",
     "react-router-mantine",
+    "react-router-mantine-gill",
     "react-vite-mantine"
   ]
 }
