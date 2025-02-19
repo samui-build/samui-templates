@@ -10,10 +10,12 @@ export function UiLayout({
   children = <Outlet />,
   headerLinks = [],
   navbarLinkGroups = [],
+  profile,
 }: {
   children?: ReactNode
   headerLinks?: AppLayoutHeaderLink[]
   navbarLinkGroups?: UiLayoutNavbarLinkGroup[]
+  profile: ReactNode
 }) {
   const [opened, { toggle, close }] = useDisclosure()
   const hasNavbar = navbarLinkGroups.length > 0
@@ -37,7 +39,7 @@ export function UiLayout({
       }}
     >
       <AppShell.Header>
-        <UiLayoutHeader hasNavbar={hasNavbar} links={headerLinks} opened={opened} toggle={toggle} />
+        <UiLayoutHeader hasNavbar={hasNavbar} links={headerLinks} opened={opened} profile={profile} toggle={toggle} />
       </AppShell.Header>
       {hasNavbar ? (
         <AppShell.Navbar>

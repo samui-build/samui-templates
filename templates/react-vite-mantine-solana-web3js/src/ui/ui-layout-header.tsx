@@ -2,6 +2,7 @@ import { Burger, Button, Group } from '@mantine/core'
 import { NavLink as Link, useLocation } from 'react-router'
 import { UiLayoutLogo } from './ui-layout-logo.tsx'
 import { UiThemeToggle } from './ui-theme-toggle.tsx'
+import { ReactNode } from 'react'
 
 export interface AppLayoutHeaderLink {
   label: string
@@ -12,11 +13,13 @@ export function UiLayoutHeader({
   hasNavbar,
   links = [],
   opened,
+  profile,
   toggle,
 }: {
   hasNavbar: boolean
   links?: AppLayoutHeaderLink[]
   opened: boolean
+  profile: ReactNode
   toggle: () => void
 }) {
   const { pathname } = useLocation()
@@ -43,6 +46,7 @@ export function UiLayoutHeader({
         ) : null}
       </Group>
       <Group justify="center" align="center" wrap="nowrap" gap="xs">
+        {profile}
         <UiThemeToggle />
       </Group>
     </Group>
