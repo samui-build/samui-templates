@@ -1,15 +1,48 @@
 {
   "templates": [
-    "hono-cloudflare-pages-solana-gill",
-    "hono-cloudflare-workers-solana-gill",
-    "hono-node-solana-gill",
-    "node-express",
-    "node-express-solana-gill",
-    "node-solana-gill",
-    "node-solana-web3js-umi",
-    "react-router-mantine",
-    "react-router-mantine-gill",
-    "react-vite-mantine",
-    "react-vite-mantine-solana-web3js"
+    {
+      "name": "hono-cloudflare-pages-solana-gill",
+      "description": "Hono on Cloudflare Pages with the Solana Gill SDK"
+    },
+    {
+      "name": "hono-cloudflare-workers-solana-gill",
+      "description": "Hono on Cloudflare Workers with the Solana Gill SDK"
+    },
+    {
+      "name": "hono-node-solana-gill",
+      "description": "Hono on Node.js with the Solana Gill SDK"
+    },
+    {
+      "name": "node-express",
+      "description": "Express on Node.js"
+    },
+    {
+      "name": "node-express-solana-gill",
+      "description": "Express on Node.js with the Solana Gill SDK"
+    },
+    {
+      "name": "node-solana-gill",
+      "description": "Node.js with the Solana Gill SDK"
+    },
+    {
+      "name": "node-solana-web3js-umi",
+      "description": "Node.js with the @solana/web3.js (v1) and Umi v1"
+    },
+    {
+      "name": "react-router-mantine",
+      "description": "React Router (framework) using Mantine"
+    },
+    {
+      "name": "react-router-mantine-gill",
+      "description": "React Router (framework) using Mantine"
+    },
+    {
+      "name": "react-vite-mantine",
+      "description": "React using Vite and Mantine"
+    },
+    {
+      "name": "react-vite-mantine-solana-web3js",
+      "description": "React using Vite and Mantine and @solana/web3.js (v1)"
+    }
   ]
 }

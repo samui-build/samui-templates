@@ -1,7 +1,7 @@
 {
   "name": "node-solana-web3js-umi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js with the @solana/web3.js (v1) and Umi v1",
   "main": "index.js",
   "type": "module",
   "scripts": {

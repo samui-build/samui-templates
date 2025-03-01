@@ -1,6 +1,6 @@
 {
   "name": "react-vite-mantine-solana-web3js",
-  "description": "React using Vite and Mantine and @solana/web3.js",
+  "description": "React using Vite and Mantine and @solana/web3.js (v1)",
   "private": true,
   "version": "1.0.0",
   "license": "MIT",

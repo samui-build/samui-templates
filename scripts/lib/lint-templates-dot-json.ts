@@ -4,11 +4,18 @@ import { existsSync } from 'node:fs'
 import { readFile, writeFile } from 'node:fs/promises'
 
 export interface TemplatesDotJson {
-  templates: string[]
+  templates: TemplateDetails[]
+}
+
+export interface TemplateDetails {
+  name: string
+  description: string
 }
 
 export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<TemplatesResult, 'directory'> & {}) {
-  const content: TemplatesDotJson = { templates: templates.sort() }
+  const details = await getTemplatesDetails(templatesDir, templates.sort())
+  console.log(`linting templates.json in ${templatesDir}`, templates, details)
+  const content: TemplatesDotJson = { templates: details }
   const templatesJsonPath = join(templatesDir, 'templates.json')
 
   if (!existsSync(templatesJsonPath)) {
@@ -25,9 +32,9 @@ export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<Tem
     return
   }
 
-  const existingTemplates = new Set(templatesJson.templates)
+  const existingTemplateNames = new Set(templatesJson.templates.map((t) => t.name))
   const isEqual =
-    existingTemplates.size === templates.length && [...existingTemplates].every((t) => templates.includes(t))
+    existingTemplateNames.size === templates.length && [...existingTemplateNames].every((t) => templates.includes(t))
   if (isEqual) {
     console.log(`templates.json is equal to ${templates.length} templates, no changes`)
     return
@@ -40,4 +47,27 @@ export async function lintTemplatesDotJson({ templatesDir, templates }: Omit<Tem
 
 function writeTemplatesDotJson(path: string, content: TemplatesDotJson) {
   return writeFile(path, JSON.stringify(content, null, 2) + '\n')
+}
+
+async function getTemplatesDetails(templatesDir: string, templates: string[]) {
+  const details: TemplateDetails[] = []
+  for (const template of templates) {
+    const path = join(templatesDir, template)
+    details.push(await getTemplateDetails(path))
+  }
+  return details
+}
+
+async function getTemplateDetails(path: string) {
+  // Read the package json file
+  const packageJsonPath = join(path, 'package.json')
+  if (!existsSync(packageJsonPath)) {
+    throw new Error(`package.json not found in ${path}`)
+  }
+  const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf-8'))
+
+  return {
+    name: packageJson.name,
+    description: packageJson.description,
+  }
 }

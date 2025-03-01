@@ -28,11 +28,12 @@ await lintTemplateFiles({
 
 await lintPackageJson({
   // These are the expected properties in the package.json file
-  expected: {
+  expectedProperties: {
     name: '{{templateName}}',
     version: '1.0.0',
     license: 'MIT',
   },
+  expectedScripts: ['build', 'ci', 'dev'],
   templates,
   templatesDir,
 })

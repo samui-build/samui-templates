@@ -1,7 +1,7 @@
 {
   "name": "node-express-solana-gill",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express on Node.js with the Solana Gill SDK",
   "main": "index.js",
   "type": "module",
   "scripts": {

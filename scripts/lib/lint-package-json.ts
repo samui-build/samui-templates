@@ -6,9 +6,11 @@ import { readFile, writeFile } from 'node:fs/promises'
 export async function lintPackageJson({
   templatesDir,
   templates,
-  expected,
+  expectedProperties,
+  expectedScripts,
 }: Omit<TemplatesResult, 'directory'> & {
-  expected: Record<string, string>
+  expectedProperties: Record<string, string>
+  expectedScripts: string[]
 }) {
   console.log(`lintPackageJson: ${templatesDir}`)
 
@@ -30,7 +32,7 @@ export async function lintPackageJson({
     const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf-8'))
 
     // Check for all the expected properties
-    for (const [key, rawValue] of Object.entries(expected)) {
+    for (const [key, rawValue] of Object.entries(expectedProperties)) {
       const value = rawValue.replace('{{templateName}}', template)
 
       if (packageJson[key] !== value) {
@@ -44,7 +46,6 @@ export async function lintPackageJson({
     }
 
     // Check for all the expected run-scripts
-    const expectedScripts = ['build', 'ci', 'dev']
     for (const script of expectedScripts) {
       if (!packageJson.scripts?.[script]) {
         console.log(`  ${packageJsonPath} does not have a ${script} script, adding...`)
