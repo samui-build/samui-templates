@@ -1,0 +1,8 @@
+{
+  "templates": [
+    {
+      "name": "node-solana-minimal",
+      "description": "Node.js with the Solana Gill SDK"
+    }
+  ]
+}

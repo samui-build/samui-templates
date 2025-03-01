@@ -9,6 +9,7 @@
     "ci-all": "pnpm -r --workspace-concurrency 1 ci",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "lint-config": "esrun scripts/lint-config.ts",
+    "lint-experimental": "esrun scripts/lint-templates.ts ./experimental",
     "lint-templates": "esrun scripts/lint-templates.ts ./templates",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
