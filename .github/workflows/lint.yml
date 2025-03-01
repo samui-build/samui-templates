@@ -1,0 +1,28 @@
+name: Lint Templates
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        uses: ./.github/workflows/actions/install-dependencies
+        with:
+          version: 22
+
+      - name: Setup Anchor
+        uses: ./.github/workflows/actions/setup-anchor
+
+      - name: Run the lint script from the top-level
+        run: pnpm lint-templates
+
+      - name: Check for changed files
+        run: git diff --exit-code
