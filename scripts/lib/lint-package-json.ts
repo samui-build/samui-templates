@@ -42,6 +42,26 @@ export async function lintPackageJson({
         await writeFile(packageJsonPath, updatedContent)
       }
     }
+
+    // Check for all the expected run-scripts
+    const expectedScripts = ['build', 'ci', 'dev']
+    for (const script of expectedScripts) {
+      if (!packageJson.scripts?.[script]) {
+        console.log(`  ${packageJsonPath} does not have a ${script} script, adding...`)
+        count++
+        await writeFile(
+          packageJsonPath,
+          JSON.stringify(
+            {
+              ...packageJson,
+              scripts: { ...packageJson.scripts, [script]: 'echo "No script"' },
+            },
+            null,
+            2,
+          ),
+        )
+      }
+    }
   }
   if (count > 0) {
     console.log(`Updated ${count} files`)

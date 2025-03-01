@@ -5,11 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc",
+    "ci": "npm run build",
     "dev": "esrun --watch src/index.ts",
-    "start": "esrun src/index.ts",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "lint": "eslint .",
+    "start": "esrun src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -6,14 +6,15 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "ci": "npm run build",
     "dev": "tsx watch src/index.ts",
+    "docker:build": "docker build -t hono-node-solana-gill:latest .",
+    "docker:push": "docker push hono-node-solana-gill",
+    "docker:run": "docker run --rm --name hono-node-solana-gill -p 3000:3000 --env-file .env hono-node-solana-gill:latest",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "docker:build": "docker build -t hono-node-solana-gill:latest .",
-    "docker:run": "docker run --rm --name hono-node-solana-gill -p 3000:3000 --env-file .env hono-node-solana-gill:latest",
-    "docker:push": "docker push hono-node-solana-gill"
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",

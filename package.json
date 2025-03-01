@@ -5,6 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build-all": "pnpm -r --workspace-concurrency 1 build",
+    "ci-all": "pnpm -r --workspace-concurrency 1 ci",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "lint-templates": "esrun scripts/lint-templates.ts ./templates",
     "fmt": "prettier --write .",

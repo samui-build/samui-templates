@@ -5,14 +5,17 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "ci": "npm run build",
     "deploy": "wrangler deploy --minify",
+    "dev": "wrangler dev",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
+    "@solana/web3.js": "2",
     "gill": "^0.4.0",
     "hono": "^4.7.2"
   },

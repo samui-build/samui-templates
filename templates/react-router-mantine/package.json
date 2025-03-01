@@ -5,16 +5,17 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "ci": "npm run build",
     "dev": "react-router dev",
+    "docker:build": "docker build -t react-router-mantine:latest .",
+    "docker:push": "docker push react-router-mantine",
+    "docker:run": "docker run --rm --name react-router-mantine -p 3000:3000 --env-file .env react-router-mantine:latest",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "docker:build": "docker build -t react-router-mantine:latest .",
-    "docker:run": "docker run --rm --name react-router-mantine -p 3000:3000 --env-file .env react-router-mantine:latest",
-    "docker:push": "docker push react-router-mantine"
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@mantine/core": "^7.17.0",
@@ -28,8 +29,7 @@
     "lucide-react": "^0.477.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.2.0",
-    "timeago-react": "^3.0.6"
+    "react-router": "^7.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

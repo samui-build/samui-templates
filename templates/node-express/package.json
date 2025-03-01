@@ -5,16 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "esrun --watch src/index.ts",
     "build": "tsc",
-    "start": "node build/index.js",
+    "ci": "npm run build",
+    "dev": "esrun --watch src/index.ts",
+    "docker:build": "docker build -t node-express-gill:latest .",
+    "docker:push": "docker push node-express-gill",
+    "docker:run": "docker run --rm --name node-express-gill -p 3000:3000 --env-file .env node-express-gill:latest",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "docker:build": "docker build -t node-express-gill:latest .",
-    "docker:run": "docker run --rm --name node-express-gill -p 3000:3000 --env-file .env node-express-gill:latest",
-    "docker:push": "docker push node-express-gill"
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "Bram Borggreve",
