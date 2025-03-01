@@ -66,5 +66,21 @@
         ]
       }
     ]
+  },
+  "experimental": {
+    "name": "Experimental Samui Templates for create-solana-dapp",
+    "templates": "experimental/templates.json",
+    "groups": [
+      {
+        "name": "All Templates",
+        "description": "All experimental templates",
+        "templates": [
+          {
+            "name": "node-solana-minimal",
+            "description": "Node.js with the Solana Gill SDK"
+          }
+        ]
+      }
+    ]
   }
 }
