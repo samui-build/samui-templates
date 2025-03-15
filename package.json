@@ -13,6 +13,7 @@
     "lint-templates": "esrun scripts/lint-templates.ts ./templates",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
+    "ncu-all": "pnpm recursive exec ncu -u",
     "process-config": "esrun scripts/process-config.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

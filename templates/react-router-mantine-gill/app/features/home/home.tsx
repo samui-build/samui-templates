@@ -34,7 +34,6 @@ export async function action({ request }: Route.ActionArgs) {
 
   assertIsAddress(address.toString())
   const balance = await client.rpc.getBalance(addressFn(address.toString())).send()
-  const project = { address, balance }
   await new Promise((resolve) => setTimeout(resolve, 300))
   return { address, balance }
 }

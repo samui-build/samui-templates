@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 20, 22 ]
-        pm: [ npm, pnpm, yarn ]
+        node: [20, 22]
+        pm: [npm, pnpm, yarn]
         template: ${{ fromJson(needs.get-templates.outputs.templates) }}
     steps:
       - name: Setup Anchor

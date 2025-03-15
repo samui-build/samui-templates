@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "ci": "npm run build",
+    "ci": "npm run build && npm run lint && npm run fmt:check",
     "dev": "tsx watch src/index.ts",
     "docker:build": "docker build -t hono-node-solana-gill:latest .",
     "docker:push": "docker push hono-node-solana-gill",
@@ -19,17 +19,18 @@
   "dependencies": {
     "@hono/node-server": "^1.13.8",
     "dotenv": "^16.4.7",
-    "gill": "^0.4.0",
-    "hono": "^4.7.2"
+    "gill": "^0.8.0",
+    "hono": "^4.7.4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/node": "^22.13.7",
-    "eslint": "^9.21.0",
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
     "globals": "^16.0.0",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "tsx": "^4.19.3",
-    "typescript-eslint": "^8.25.0"
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
   },
   "create-solana-dapp": {
     "instructions": [
