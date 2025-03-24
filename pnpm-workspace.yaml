@@ -1,3 +1,4 @@
 packages:
-  - 'experimental/*'
-  - 'templates/*'
+  - base/*
+  - experimental/*
+  - templates/*

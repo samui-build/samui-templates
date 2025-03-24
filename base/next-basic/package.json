@@ -1,0 +1,42 @@
+{
+  "name": "next-basic",
+  "description": "Basic Next.js template",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "ci": "tsc --noEmit && next build",
+    "dev": "next dev --turbopack",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.2.3",
+    "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "typescript": "^5"
+  },
+  "create-solana-dapp": {
+    "rename": {
+      "scaffold": {
+        "to": "{{name}}",
+        "paths": [
+          "src"
+        ]
+      }
+    }
+  }
+}

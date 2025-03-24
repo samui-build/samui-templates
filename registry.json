@@ -67,6 +67,21 @@
       }
     ]
   },
+  "base": {
+    "name": "Base Samui Templates for create-solana-dapp",
+    "templates": "base/templates.json",
+    "groups": [
+      {
+        "name": "All Templates",
+        "description": "All base templates",
+        "templates": [
+          {
+            "name": "next-basic"
+          }
+        ]
+      }
+    ]
+  },
   "experimental": {
     "name": "Experimental Samui Templates for create-solana-dapp",
     "templates": "experimental/templates.json",
